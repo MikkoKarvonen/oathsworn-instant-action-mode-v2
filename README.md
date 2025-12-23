@@ -1,10 +1,10 @@
 # Lorekeeper's Companion
 
-A web-based audio book reader for **Tales from the Red Dragon Inn**, featuring synchronized text and audio playback with customizable reading modes.
+A web-based audio book reader for **Oathsworn: Into the Deepwood**, featuring synchronized text and audio playback with customizable reading modes.
 
 ## Resources & Tools
 
-- [SlugFest Games — Tales from the Red Dragon Inn Resources](https://slugfestgames.com/tales-from-the-red-dragon-inn-resources/)
+- [Shadowborne Games — Oathsworn Store Page](https://www.shadowborne-games.com/pages/shop)
 - [CloudConvert — Audio Format Converter](https://cloudconvert.com)
 - [Clideo — Merge Audio Files](https://clideo.com/merge-audio)
 - [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech)
@@ -12,7 +12,7 @@ A web-based audio book reader for **Tales from the Red Dragon Inn**, featuring s
 
 ## Features
 
-- 📖 **Chapter Navigation** - Browse through 25 chapters of tavern tales
+- 📖 **Chapter Navigation** - Browse through the Deepwood chronicle chapters
 - 🎵 **Audio Playback** - Play/pause audio narration for each section
 - ⚡ **Playback Speed Control** - Adjust playback speed from 1x to 2x
 - 📝 **Compact Mode** - Toggle compact versions of Prologues and Epilogues (Reinforcements remain full-length)
@@ -39,7 +39,7 @@ A web-based audio book reader for **Tales from the Red Dragon Inn**, featuring s
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd red-dreagon-inn-reader
+cd oathsworn-instant-action-mode-v2
 ```
 
 2. Install dependencies:
@@ -69,7 +69,7 @@ pnpm preview
 ## Project Structure
 
 ```
-red-dreagon-inn-reader/
+oathsworn-instant-action-mode-v2/
 ├── public/
 │   └── audio/              # Audio files organized by chapter
 │       ├── chapter-1/
