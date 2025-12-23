@@ -26,20 +26,6 @@ function App() {
             A grim companion forged for the Wire Road—track chapters, adjust the pace,
             and keep your company moving before the Deepwood closes in.
           </p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3 text-xs uppercase tracking-[0.2em] text-slate-300/80">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-400/70 shadow-[0_0_0_4px_rgba(16,185,129,0.08)]" />
-              Bastone Watch
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-amber-400/80 shadow-[0_0_0_4px_rgba(251,191,36,0.08)]" />
-              Reinforcements Ready
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-sky-400/70 shadow-[0_0_0_4px_rgba(56,189,248,0.08)]" />
-              Epilogue Ahead
-            </div>
-          </div>
         </header>
 
         <section className="glass rounded-2xl p-6 md:p-8 space-y-6">
@@ -86,10 +72,6 @@ function App() {
                   </h2>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-emerald-200/80">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
-                Prologue • Reinforcements • Epilogue
-              </div>
             </div>
             <div className="grid gap-6">
               {chapter.sections && chapter.sections.length > 0 && (
@@ -101,17 +83,12 @@ function App() {
                         key={`${chapter.number}-section-${index}`}
                         className="fantasy-card"
                       >
-                        <div className="flex items-start justify-between gap-4 mb-3">
-                          <div className="flex items-center gap-3">
-                            <h4 className="text-lg font-semibold text-amber-100">
-                              Section {index + 1}
-                            </h4>
-                            <span className={`section-badge ${section.type}`}>
-                              {section.type === 'rule' ? 'Rule' : 'Story'}
-                            </span>
-                          </div>
-                          <span className="text-xs uppercase tracking-[0.2em] text-slate-300/80">
-                            Deepwood dispatch
+                        <div className="flex items-center justify-between gap-4 mb-3">
+                          <h4 className="text-lg font-semibold text-amber-100">
+                            Section {index + 1}
+                          </h4>
+                          <span className={`section-badge ${section.type}`}>
+                            {section.type === 'rule' ? 'Rule' : 'Story'}
                           </span>
                         </div>
                         <div className="grim-divider mb-3" />
