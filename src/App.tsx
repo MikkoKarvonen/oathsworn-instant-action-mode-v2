@@ -97,65 +97,31 @@ function App() {
               </div>
             </div>
             <div className="grid gap-6">
-              <div className="space-y-4">
-                <div className="banner-header">
-                  Prologue
-                </div>
-                <SectionCard
-                  section={chapter.prologue}
-                  audioSrc={getAudioPath(chapter.number, 'prologue', compact)}
-                  playbackRate={playbackSpeed}
-                  compact={compact}
-                />
-              </div>
-
-              {chapter.partTwo && (
+              {chapter.sections && chapter.sections.length > 0 && (
                 <div className="space-y-4">
                   <div className="banner-header">
-                    Part Two
+                    Sections
                   </div>
-                  <SectionCard
-                    section={chapter.partTwo}
-                    audioSrc={getAudioPath(chapter.number, 'part-2', compact)}
-                    playbackRate={playbackSpeed}
-                    compact={compact}
-                  />
-                </div>
-              )}
-
-              {chapter.reinforcements && (
-                <div className="space-y-4">
-                  <div className="banner-header">
-                    Reinforcements
-                  </div>
-                  <div className="grid gap-4 md:grid-cols-2">
-                    {chapter.reinforcements.map((section, index) => (
+                  <div className="grid gap-4">
+                    {chapter.sections.map((section, index) => (
                       <article
-                        key={section.title}
+                        key={`${chapter.number}-section-${index}`}
                         className="fantasy-card"
                       >
                         <div className="flex items-start justify-between gap-4 mb-2">
-                          <h4 className="text-base font-semibold text-amber-200">{section.title}</h4>
-                          <PlayButton audioSrc={getAudioPath(chapter.number, 'reinforcements', compact, index)} playbackRate={playbackSpeed} />
+                          <h4 className="text-base font-semibold text-amber-200">
+                            Section {index + 1}
+                          </h4>
+                          <span className="text-xs uppercase tracking-[0.2em] text-purple-300">Story</span>
                         </div>
-                        <p className="mt-2 text-slate-200 leading-relaxed">{section.full}</p>
+                        <p className="mt-2 text-slate-200 leading-relaxed whitespace-pre-wrap">
+                          {section.text}
+                        </p>
                       </article>
                     ))}
                   </div>
                 </div>
               )}
-
-              <div className="space-y-4">
-                <div className="banner-header">
-                  Epilogue
-                </div>
-                <SectionCard
-                  section={chapter.epilogue}
-                  audioSrc={getAudioPath(chapter.number, 'epilogue', compact)}
-                  playbackRate={playbackSpeed}
-                  compact={compact}
-                />
-              </div>
             </div>
           </div>
         </section>
