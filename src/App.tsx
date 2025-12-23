@@ -21,7 +21,7 @@ function App() {
             <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-amber-400/60 to-transparent" />
           </div>
           <h1 className="mt-4 text-4xl md:text-5xl font-bold font-display text-amber-200 drop-shadow-[0_6px_30px_rgba(0,0,0,0.8)]">
-            Lorekeeper&apos;s Companion
+            Oathsworn Field Guide
           </h1>
           <p className="mt-3 text-slate-200/90 max-w-3xl leading-relaxed">
             A grim companion forged for the Wire Road—track chapters, adjust the pace,
@@ -126,7 +126,7 @@ function App() {
             </a>
             <span className="text-slate-600">•</span>
             <a
-              href="https://github.com/MikkoKarvonen/red-dragon-inn-reader"
+              href="https://github.com/MikkoKarvonen/oathsworn-instant-action-mode-v2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-emerald-200 hover:text-amber-300 transition-colors underline decoration-emerald-700/50 hover:decoration-amber-500"
