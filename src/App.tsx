@@ -1,15 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import { chapters } from './data/chapters'
-import { PlayButton } from './components/PlayButton'
-import { SectionCard } from './components/SectionCard'
-import { getAudioPath } from './utils/audio'
 
 const playbackSpeeds = [1, 1.25, 1.5, 1.75, 2]
 
 function App() {
   const [selectedChapter, setSelectedChapter] = useState(chapters[0]?.number ?? 1)
-  const [compact, setCompact] = useState(false)
   const [playbackSpeed, setPlaybackSpeed] = useState(1)
 
   const chapter = chapters.find((c) => c.number === selectedChapter) ?? chapters[0]
@@ -29,9 +25,8 @@ function App() {
             Lorekeeper&apos;s Companion
           </h1>
           <p className="text-slate-200 max-w-2xl leading-relaxed">
-            Browse chapters, skim compact hooks, or savor the full tavern tales. Switch
-            to compact mode to tighten Prologue and Epilogue while keeping Reinforcements
-            rich and ready.
+            Browse chapters and savor the full tavern tales at your preferred pace with
+            adjustable playback speed and ready-to-go reinforcements.
           </p>
         </header>
 
@@ -52,37 +47,19 @@ function App() {
               </select>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:items-end">
-              <div className="flex flex-col gap-2">
-                <label className="text-sm text-purple-200 font-semibold">Playback speed</label>
-                <select
-                  className="w-full md:w-32 rounded-lg bg-slate-900/90 border-2 border-purple-500/50 text-slate-100 px-3 py-2 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/50 outline-none transition-colors"
-                  value={playbackSpeed}
-                  onChange={(event) => setPlaybackSpeed(Number(event.target.value))}
-                >
-                  {playbackSpeeds.map((speed) => (
-                    <option key={speed} value={speed} className="bg-slate-900">
-                      {speed}x
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <label className="flex items-center gap-3 text-sm text-purple-200">
-                <span className="font-semibold">Compact Prologue & Epilogue</span>
-                <button
-                  type="button"
-                  aria-pressed={compact}
-                  onClick={() => setCompact((prev) => !prev)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${compact ? 'bg-gradient-to-r from-orange-500 to-amber-500' : 'bg-slate-700 border-2 border-slate-600'
-                    }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition ${compact ? 'translate-x-6' : 'translate-x-1'
-                      }`}
-                  />
-                </button>
-              </label>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-purple-200 font-semibold">Playback speed</label>
+              <select
+                className="w-full md:w-32 rounded-lg bg-slate-900/90 border-2 border-purple-500/50 text-slate-100 px-3 py-2 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/50 outline-none transition-colors"
+                value={playbackSpeed}
+                onChange={(event) => setPlaybackSpeed(Number(event.target.value))}
+              >
+                {playbackSpeeds.map((speed) => (
+                  <option key={speed} value={speed} className="bg-slate-900">
+                    {speed}x
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 
@@ -127,10 +104,6 @@ function App() {
         </section>
 
         <footer className="text-xs text-purple-300/70 text-center space-y-3">
-          <p className="italic">
-            Compact mode affects only Prologue and Epilogue. Reinforcements remain full-length to
-            capture tactical details.
-          </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a
               href="https://slugfestgames.com/tales-from-the-rdi/"
