@@ -202,4 +202,30 @@ body::after {
     width: 100%;
     background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
   }
+
+  .story-card {
+    background: linear-gradient(135deg, rgba(13, 17, 22, 0.94) 0%, rgba(9, 12, 15, 0.97) 100%);
+  }
+
+  .rule-card {
+    background: linear-gradient(135deg, rgba(22, 24, 18, 0.96) 0%, rgba(19, 20, 14, 0.95) 100%);
+    border-image: linear-gradient(135deg, rgba(250, 204, 21, 0.6), rgba(217, 119, 6, 0.6), rgba(202, 138, 4, 0.55)) 1;
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 22px rgba(234, 179, 8, 0.15);
+  }
+
+  .rule-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, rgba(234, 179, 8, 0.6), rgba(217, 119, 6, 0.5));
+    opacity: 0.9;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
 }

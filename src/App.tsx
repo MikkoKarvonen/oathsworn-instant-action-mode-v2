@@ -81,7 +81,7 @@ function App() {
                     {chapter.sections.map((section, index) => (
                       <article
                         key={`${chapter.number}-section-${index}`}
-                        className="fantasy-card"
+                        className={`fantasy-card ${section.type === 'rule' ? 'rule-card' : 'story-card'}`}
                       >
                         <div className="flex items-center justify-between gap-4 mb-3">
                           <h4 className="text-lg font-semibold text-amber-100">
