@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { chapters } from './data/chapters'
+import { PlayButton } from './components/PlayButton'
 
 const playbackSpeeds = [1, 1.25, 1.5, 1.75, 2]
 
@@ -87,9 +88,18 @@ function App() {
                           <h4 className="text-lg font-semibold text-amber-100">
                             Section {index + 1}
                           </h4>
-                          <span className={`section-badge ${section.type}`}>
-                            {section.type === 'rule' ? 'Rule' : 'Story'}
-                          </span>
+                          <div className="flex items-center gap-3">
+                            {section.type === 'story' && (
+                              <PlayButton
+                                audioSrc={`chapter-${chapter.number}/section-${index + 1}.mp3`}
+                                playbackRate={playbackSpeed}
+                                className="shrink-0"
+                              />
+                            )}
+                            <span className={`section-badge ${section.type}`}>
+                              {section.type === 'rule' ? 'Rule' : 'Story'}
+                            </span>
+                          </div>
                         </div>
                         <div className="grim-divider mb-3" />
                         <p className="mt-2 text-slate-200 leading-relaxed whitespace-pre-wrap">

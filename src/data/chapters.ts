@@ -57,15 +57,13 @@ IF YOU SUCCEED, ALL OATHSWORN GAIN A +2 ANIMUS TOKEN FOR OBTAINING GOOD INFORMAT
       }, {
         text: `"Not me you're looking for, I do the job proper," he says. "Jeffit's the one you want. He pays them guards to look the other way while he throws 'em right over the wall. I tell ya, that's what lures the monsters."
 
-
 The body collector directs you to a guard tower on the outer wall of Bastone. Climbing the rain slicked stone steps of the tower, you approach a group of guards and call out to them through the dark, wet night. They know exactly why you have come, and what you are looking for. Fearing for their lives, and in an attempt to keep their secret safe they attack.`,
         type: 'story'
       }, {
         text: `PERFORM A ROUND OF COMBAT AGAINST DEFENSE 5. ALL OATHSWORN THAT CRITICAL DURING THE COMBAT GAIN AN EMPOWERED X3 TOKEN.`,
         type: 'rule'
       }, {
-        text: `After you dispatch the last guard, you begin to search for signs of bodies discarded by the other body collector, Jeffit. During the search,
-you encounter another guard peering into the darkness below the wall. "Help her!" he cries out to you. "They've been throwing bodies off the wall for weeks now, but she's still alive!" As you look over the crenelations, you see a pack of rat-like creatures crawl from the Deepwood and drag a woman out of a pile of corpses below.`,
+        text: `After you dispatch the last guard, you begin to search for signs of bodies discarded by the other body collector, Jeffit. During the search, you encounter another guard peering into the darkness below the wall. "Help her!" he cries out to you. "They've been throwing bodies off the wall for weeks now, but she's still alive!" As you look over the crenelations, you see a pack of rat-like creatures crawl from the Deepwood and drag a woman out of a pile of corpses below.`,
         type: 'story'
       }, {
         text: `PERFORM A REASONING CHECK (DIFFICULTY 4). IF YOU SUCCEED, ALL OATHSWORN GAIN A DEFENSE TOKEN AND MARK THE ENCOUNTER SPECIAL RULES BOARD BOX FOR CHAPTER 1 ON YOUR FREE COMPANY SHEET.`,
