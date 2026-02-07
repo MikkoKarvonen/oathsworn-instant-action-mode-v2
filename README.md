@@ -2,6 +2,10 @@
 
 A web-based audio book reader for **Oathsworn: Into the Deepwood**, featuring synchronized text and audio playback with customizable reading modes.
 
+## Live
+
+- [https://oathsworn-instant-action-mode.vercel.app](https://oathsworn-instant-action-mode.vercel.app)
+
 ## Resources & Tools
 
 - [Shadowborne Games — Oathsworn Store Page](https://www.shadowborne-games.com/pages/shop)
